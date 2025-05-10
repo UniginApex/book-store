@@ -1,0 +1,11 @@
+const express = require('express');
+const router = express.Router();
+const userController = require('../controllers/userController');
+
+// Task 6-9
+router.post('/register', userController.register);          // Register
+router.post('/login', userController.login);               // Login
+router.post('/reviews/:isbn', userController.addReview);   // Add review
+router.delete('/reviews/:isbn', userController.deleteReview); // Delete review
+
+module.exports = router;
